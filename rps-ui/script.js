@@ -32,17 +32,24 @@ messageSpace.appendChild(outcome);
 
 
 // The blocks below are used to display W - L - D counter
+const records = document.createElement('div');
+records.classList.add("records");
+messageSpace.appendChild(records);
+
 const winDisplay = document.createElement('p');
+winDisplay.classList.add("wld");
 winDisplay.textContent = `Wins: ${win}`;
-messageSpace.appendChild(winDisplay);
+records.appendChild(winDisplay);
 
 const loseDisplay = document.createElement('p');
+loseDisplay.classList.add("wld");
 loseDisplay.textContent = `Losses: ${lose}`;
-messageSpace.appendChild(loseDisplay);
+records.appendChild(loseDisplay);
 
 const drawDisplay = document.createElement('p');
+drawDisplay.classList.add("wld");
 drawDisplay.textContent = `Draws: ${draw}`;
-messageSpace.appendChild(drawDisplay);
+records.appendChild(drawDisplay);
 
 // this function determines the win-loss-draw outcome based on user and computer choices
 function game(user, computer) {

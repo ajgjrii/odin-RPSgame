@@ -1,32 +1,47 @@
-function userChoice () {
-    // const rock looks for .rock and sets user choice 
-    // when the button is clicked. same process is used
-    // for the other two choices in RPS.
-    const rock = document.querySelector('.rock');
-    rock.addEventListener('click', function(e) {
-        user="rock";    
-        // comment these lines out when done
-        console.log(user);
-        return user;
-    });
-
-    const paper = document.querySelector('.paper');
-    paper.addEventListener('click', function(e) {
-        user="paper";    
-        // comment these lines out when done
-        console.log(user);
-        return user;
-    });
-
-    const scissors = document.querySelector('.scissors');
-    scissors.addEventListener('click', function(e) {
-        user="scissors";    
-        // comment these lines out when done
-        console.log(user);
-        return user;
-        
-    });
-
+function compChoice () {
+    var rando = Math.floor(Math.random() * 3) + 1
+    if (rando == 1) {
+        computer = "rock";
+    } else if ( rando == 2) {
+        computer = "paper";
+    } else {
+        computer = "scissors";
+    }
+    return computer;
 }
 
-userChoice();
+var user = "";
+var computer = "";
+
+
+const rock = document.querySelector('.rock');
+rock.addEventListener('click', () => {
+    var user="rock";    
+    console.log("You have chosen: ",user);
+    compChoice();
+    console.log("The computer has chosen: ", computer)
+});
+
+const paper = document.querySelector('.paper');
+paper.addEventListener('click', () => {
+    var user="paper";    
+    console.log("You have chosen: ",user);
+    compChoice();
+    console.log("The computer has chosen: ", computer)
+});
+
+const scissors = document.querySelector('.scissors');
+scissors.addEventListener('click', () => {
+    var user="scissors";    
+    console.log("You have chosen: ",user);
+    compChoice();
+    console.log("The computer has chosen: ", computer)   
+});
+
+
+
+// const runGame = document.querySelector('.choice');
+// runGame.addEventListener('click', () => {
+//     console.log("You have chosen: ", user);
+//    console.log("The computer has chosen: ", computer);
+// });

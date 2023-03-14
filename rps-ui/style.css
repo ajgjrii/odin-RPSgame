@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.records {
+    display: flex;
+}
+
+.wld {
+    display: flex;
+    padding-right: 15px;
+}
